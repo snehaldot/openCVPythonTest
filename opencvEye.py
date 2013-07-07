@@ -1,8 +1,10 @@
-import cv2.cv as cv
+import cv2 
+import cv
 import time
 import Image
 
 cv.NamedWindow("camera", 1)
+cv.MoveWindow("camera",50,150)
 capture = cv.CreateCameraCapture(0)
 
 width = None
@@ -30,7 +32,7 @@ def Display(image):
 	cv.NamedWindow("Red Eye Test")
 	cv.ShowImage("Red Eye Test", image)
 	cv.WaitKey(0)
-	cv.DestroyWindow("Red Eye Test")
+        cv.DestroyWindow("Red Eye Test")
 
 def DetectRedEyes(image, faceCascade, eyeCascade):
 	min_size = (20,20)

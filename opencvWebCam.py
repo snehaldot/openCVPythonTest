@@ -2,7 +2,7 @@ import cv
 import time
 
 cv.NamedWindow("camera", 1)
-capture = cv.CreateCameraCapture(0)
+capture = cv.CreateCameraCapture(-1)
 
 width = None #leave None for auto-detection
 height = None #leave None for auto-detection

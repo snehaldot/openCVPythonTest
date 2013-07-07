@@ -12,9 +12,9 @@ class CvDisplayPanel(wx.Panel):
         wx.Panel.__init__(self, parent, -1)
         # Convert the raw image data to something wxpython can handle.
         #cv.CvtColor(img, img, cv.CV_BGR2RGB)
-        #self.bmp = wx.BitmapFromBuffer(img.width, img.height	)
+        self.bmp = wx.BitmapFromBuffer(img.width, img.height)
         # Display the resulting image
-        #sbmp = wx.StaticBitmap(self, -1, bitmap=self.bmp)
+        sbmp = wx.StaticBitmap(self, -1, bitmap=self.bmp)
 
 if __name__=="__main__":
     imageToDisplay = cv.LoadImage("new.jpg")
